@@ -2,8 +2,9 @@ from typing import Final
 import os
 from responses import get_response, get_response_id
 from discord import Intents, Client, Message
-
-TOKEN = 'MTI5MDU0ODYzNDY1MTQ2MzcyMA.GkDZLy.Ot2OO6-x5VmVnwEiG6J3nSwEZ8ym1DJ2w4Y5dY'
+from dotenv import load_dotenv
+load_dotenv()
+TOKEN = os.getenv("TOKEN")
 
 # INTENTS
 intents: Intents = Intents.default()
